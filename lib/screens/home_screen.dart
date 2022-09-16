@@ -4,6 +4,7 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import '../utils/app_style.dart';
+import '../widgets/double_text_widget.dart';
 import 'hotel_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -65,18 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   )
                 ),
                 const Gap(40),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text('Upcoming Flights', style: Styles.headLineStyle2),
-                    InkWell(
-                      onTap: () {
-                        print('are u okay');
-                      },
-                      child: Text('View all', style: Styles.textStyle.copyWith(color: Styles.primaryColor))
-                    )
-                  ]
-                ),
+                const AppDoubleTextWidget(title: 'Upcoming Flights', linkTitle: 'View all'),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   padding: const EdgeInsets.only(right: 0),
